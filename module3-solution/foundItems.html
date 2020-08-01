@@ -1,0 +1,7 @@
+<ol class="jumbotron">
+    <li ng-repeat="item in menu.foundItems">
+        Name: {{item.name}}<br>Short Name: {{item.short_name}}<br>Description: {{item.description}}<br>
+        <input type="button" ng-click="menu.onRemove({index: $index})" value="Remove">
+    </li>
+</ol>
+<div class="alert alert-danger" role="alert" ng-show="menu.onEmpty">{{menu.onEmpty}}</div>
